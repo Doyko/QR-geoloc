@@ -26,7 +26,7 @@ node server.js
 
 ### public
 
-`public` is a folder with all the generated images showed to the user.
+`public` is a folder automatically created with all the generated images showed to the user.
 
 ### views
 
