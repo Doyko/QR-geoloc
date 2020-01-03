@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <style>
+        body {
+          background-image: url('http://www.epaurif.fr/assets/galleries/77/esclangon_1.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+    <head>
+        <title>Localisation par QR-Code</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container text-center">
+            <h2><span class="badge badge-primary">Localisez-vous facilement !</span></h2>
+            <div class="row-center">
+                <div class="col-sm-4-center">
+                    <h3><span class="badge badge-primary">Votre position</span></h3>
+                    <img src="./source_<%= source %>.png" class="img-responsive" style="width:100%">
+                </div>
+            </div>
+            <br>
+            <div class="row-center">
+                <div class="dropdown">
+                    <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <b>Choisissez votre destination</b>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <% for (d of dests) { %>
+                            <a class="dropdown-item" href="/?source=<%= source %>&dest=<%= d %>"><%= d %></a>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
